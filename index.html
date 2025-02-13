@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my valentines</title>
+    <link rel="stylesheet" type="text/css" href="style.css" class="style css">
+</head>
+<body>
+    <div class="happy-valentines">
+        <div class="valentines-day-card">
+            <div class="clouds"></div>
+            <div class="hearts">
+                <div class="heartOne">
+                    <div class="left-side"></div>
+                    <div class="right-side"></div>
+                </div>
+                <div class="heartTwo">
+                    <div class="left-side"></div>
+                    <div class="right-side"></div>
+                </div>
+                <div class="heartThree">
+                    <div class="left-side"></div>
+                    <div class="right-side"></div>
+                </div>
+                <div class="heartFour">
+                    <div class="left-side"></div>
+                    <div class="right-side"></div>
+                </div>
+                <div class="heartFive">
+                    <div class="left-side"></div>
+                    <div class="right-side"></div>
+                </div>
+            </div>
+            <div class="text"><span>Happy Valentines's </br>Day!</div>
+        </div>
+    <p class="hover">- hover over the text -</p>    
+    </div>
+    <!-- Add audio element before closing body tag -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="Fetty Wap - Again [ Audio ].mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Add this script to handle autoplay
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgMusic');
+            
+            // Try to play audio when page loads
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // Auto-play was prevented
+                    console.log("Autoplay prevented. User interaction required.");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
