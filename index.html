@@ -58,5 +58,27 @@
             }
         });
     </script>
+    </script>
+    <!-- Add before closing body tag -->
+    <button id="playButton" style="position: fixed; bottom: 20px; right: 20px; padding: 15px; border-radius: 50%; background: #ff69b4; border: none; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        ♫
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('bgMusic');
+            const playButton = document.getElementById('playButton');
+            
+            playButton.addEventListener('click', function() {
+                if (audio.paused) {
+                    audio.play();
+                    playButton.innerHTML = '⏸';
+                } else {
+                    audio.pause();
+                    playButton.innerHTML = '♫';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
